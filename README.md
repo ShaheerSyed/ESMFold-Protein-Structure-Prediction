@@ -12,7 +12,7 @@ The motivation behind this project stems from the cutting-edge work of the Meta 
 
 ## Demo App
 
-
+[Check out the app here!](https://shaheersyed-esmfold-protein-structure-prediction-baseapp-egjgfj.streamlit.app/)
 
 ## Contributors
 
