@@ -26,7 +26,6 @@ body {
 
 h1 {
     font-size: 48px;
-    color: #FFFFFF;
     text-align: center;
     font-weight: bold;
     margin-top: 40px;
@@ -35,14 +34,12 @@ h1 {
 
 h3 {
     font-size: 48px;
-    color: #FFFFFF;
     text-align: center;
     font-weight: bold;
     margin-top: 40px;
 }
 
 .container {
-    background-color: #FFFFFF;
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0px 0px 10px #BBBBBB;
@@ -53,7 +50,6 @@ h3 {
 }
 
 .sidebar {
-    background-color: #FFFFFF;
     width: 250px;
     height: 500px;
     border-radius: 20px;
