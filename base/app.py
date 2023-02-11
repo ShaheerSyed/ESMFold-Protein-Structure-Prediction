@@ -17,7 +17,7 @@ import biotite.structure.io as bsio
 st.set_page_config(page_title='Protein Structure Prediction using ESMFold')
 
 # Formatting Streamlit Webpage using CSS Style
-with open('style.css') as f:
+with open('templates/style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 #
@@ -49,9 +49,8 @@ else:
 style = st.sidebar.selectbox('style',['cartoon','line','stick','sphere'])
 spin = st.sidebar.checkbox('Spin', value = False)
 
-'''
-Visual for Predicted Protein Structure
-'''
+
+# Visual for Predicted Protein Structure
 def render_mol(pdb):
     pdbview = py3Dmol.view()
     pdbview.addModel(pdb,'pdb')
@@ -65,13 +64,10 @@ def render_mol(pdb):
         pdbview.spin(False)
     showmol(pdbview, height = 500,width=1000)
 
-'''
-Calling ESMFold API to predict protein structure from sequence; 
-Generate PDB
-Calculating pLDDT score;
-Display Protein Structure
-Download PDB option
-'''
+# Calling ESMFold API for Protein Structure Prediction
+# Generating PDB File
+# Displaying Prediction
+# Calculating pLDDT Confidence
 def update(sequence=txt):
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -117,7 +113,6 @@ def update(sequence=txt):
 
 # When predict is clicked; Display: Predicted Structure and pLDDT score
 predict = st.sidebar.button('Predict', on_click=update)
-
 # Signature
 st.sidebar.subheader('This app was developed by Shaheer Syed')
 
