@@ -1,6 +1,5 @@
 # Shaheer Syed
 # This work was inspired by the ESM Fold Protein Structure Prediction by Meta
-
 # Note: With Streamlit -- Python Script is read from top-to-bottom;
 # Therefore, web app renders top-to-bottom
 # Title needs to be specified for before and after prediction
@@ -16,13 +15,74 @@ import biotite.structure.io as bsio
 # Setting-up Streamlit Web Page Configuration
 st.set_page_config(page_title='Protein Structure Prediction using ESMFold')
 
-# Formatting Streamlit Webpage using CSS Style
-with open('templates/style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-#
-#
-#
+# Formatting Streamlit Webpage using CSS Style
+st.markdown("""
+<style>
+body {
+    background-color: #F7F7F7;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+
+h3 {
+    font-size: 48px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.container {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 0px 10px #BBBBBB;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar {
+    background-color: #FFFFFF;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px #BBBBBB;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar select, .sidebar textarea {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+}
+
+.sidebar .checkbox {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#mol-div {
+    margin-top: 40px;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # base\app.py
 
